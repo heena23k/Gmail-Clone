@@ -7,6 +7,7 @@ import { TbGridDots } from "react-icons/tb";
 import Avatar from "react-avatar";
 
 const Navbar = () => {
+  const user = false;
   return (
     <div className="flex items-center justify-between mx-3 h-16">
       <div className="flex items-center gap-10">
@@ -22,32 +23,24 @@ const Navbar = () => {
           <h1 className="text-2xl text-gray-500 font-medium">Gmail</h1>
         </div>
       </div>
-      <div className="w-[50%] mr-60">
-        <div className="flex items-center bg-[#EAF1FB] px-2 py-3 rounded-full">
-          <FiSearch size={"24"} className="text-grey-700" />
-          <input
-            className="rounded-full w-full bg-transparent outline-none px-1"
-            type="text"
-            placeholder="Search mail"
+      {user && (
+        <div className="flex items-center gap-1">
+          <div className="p-2 rounded-full hover:bg-gray-200">
+            <FaRegQuestionCircle size={"24"} />
+          </div>
+          <div className="p-2 rounded-full hover:bg-gray-200">
+            <IoSettingsOutline size={"24"} />
+          </div>
+          <div className="p-2 rounded-full hover:bg-gray-200">
+            <TbGridDots size={"24"} />
+          </div>
+          <Avatar
+            src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg?w=360"
+            size="40"
+            round={true}
           />
         </div>
-      </div>
-      <div className="flex items-center gap-1">
-        <div className="p-2 rounded-full hover:bg-gray-200">
-          <FaRegQuestionCircle size={"24"} />
-        </div>
-        <div className="p-2 rounded-full hover:bg-gray-200">
-          <IoSettingsOutline size={"24"} />
-        </div>
-        <div className="p-2 rounded-full hover:bg-gray-200">
-          <TbGridDots size={"24"} />
-        </div>
-        <Avatar
-          src="https://img.freepik.com/premium-vector/avatar-profile-icon-flat-style-female-user-profile-vector-illustration-isolated-background-women-profile-sign-business-concept_157943-38866.jpg?w=360"
-          size="40"
-          round={true}
-        />
-      </div>
+      )}
     </div>
   );
 };
