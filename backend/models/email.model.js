@@ -2,17 +2,21 @@ import mongoose from "mongoose";
 
 const emailSchema = new mongoose.Schema({
     to:{
-        type:string,
+        type:String,
         required:true
     },
     subject:{
-        type:string,
+        type:String,
         required:true
     },
     message:{
-        type:string,
+        type:String,
         required:true
     },
+    userId:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'User'
+    }
 
-},{timestamps})
+},{timestamps:true})
 export const Email = mongoose.model("Email",emailSchema);

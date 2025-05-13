@@ -2,21 +2,21 @@ import mongoose from "mongoose";
 
 const userSchema = new mongoose.Schema({
     fullname:{
-        type:string,
+        type:String,
         required:true
     },
     email:{
-        type:string,
+        type:String,
         required:true
     },
     password:{
-        type:string,
+        type:String,
         required:true
     },
     profilePhoto:{
-        type:string,
+        type:String,
         required:true
     },
 
-},{timestamps})
+},{timestamps:true})
 export const User = mongoose.model("User",userSchema);

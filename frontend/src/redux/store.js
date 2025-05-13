@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { appSlice } from "../redux/appSlice";
+import { appSlice } from "../redux/appSlice.js";
 
 const store = configureStore({
   reducer: {
@@ -8,3 +8,5 @@ const store = configureStore({
 });
 
 export default store;
+
+
