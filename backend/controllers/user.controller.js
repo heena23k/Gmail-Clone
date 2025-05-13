@@ -22,7 +22,7 @@ export const register = async (req, res) => {
 
     const hashedPassword = await bcrypt.hash(password, 10);
 
-    const profilePhoto = `https://avatar.iran.liara.run/public`;
+    const profilePhoto = `https://avatar.iran.liara.run/public/boy`;
     await User.create({
       fullname,
       email,

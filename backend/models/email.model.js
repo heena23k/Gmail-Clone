@@ -17,6 +17,5 @@ const emailSchema = new mongoose.Schema({
         type:mongoose.Schema.Types.ObjectId,
         ref:'User'
     }
-
-},{timestamps:true})
-export const Email = mongoose.model("Email",emailSchema);
+},{timestamps:true});
+export const Email = mongoose.model("Email", emailSchema);

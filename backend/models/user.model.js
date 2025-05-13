@@ -16,7 +16,6 @@ const userSchema = new mongoose.Schema({
     profilePhoto:{
         type:String,
         required:true
-    },
-
-},{timestamps:true})
-export const User = mongoose.model("User",userSchema);
+    }
+},{timestamps:true});
+export const User = mongoose.model("User", userSchema);
